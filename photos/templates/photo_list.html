@@ -7,7 +7,7 @@
     <ul>
         {% for photo in object_list %}
             <li>No {{ photo.pk }}. {{ photo.user }}:
-                <a href="{% url 'photos:view_photo' pk=photo.pk %}">{{ photo.title }}</a></li>
+                <a href="{% url 'photos:view_photo' pk=photo.pk %}">{{ photo.desc }}</a></li>
         {% empty %}
             <li>No Photos</li>
         {% endfor %}

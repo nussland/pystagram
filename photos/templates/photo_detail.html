@@ -5,7 +5,7 @@
             <a href="{% url 'photos:delete_photo' pk=object.pk %}">Delte</a>
         </small></h2>
     <ul>
-        <li>No {{ photo.pk }}. {{ object.user }}: {{ object.content }}<br>
+        <li>No {{ photo.pk }}. {{ object.user }}: {{ object.desc }}<br>
             <img src="{{ object.image.url }}"></li>
     </ul>
 {% endblock %}
