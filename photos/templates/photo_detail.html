@@ -1,0 +1,11 @@
+{% block content %}
+    <h2>Photo View
+        <small>
+            <a href="{% url 'photos:list_photos' %}">List</a>
+            <a href="{% url 'photos:delete_photo' pk=object.pk %}">Delte</a>
+        </small></h2>
+    <ul>
+        <li>No {{ photo.pk }}. {{ object.user }}: {{ object.content }}<br>
+            <img src="{{ object.image.url }}"></li>
+    </ul>
+{% endblock %}
